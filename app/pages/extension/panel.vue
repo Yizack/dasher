@@ -4,7 +4,7 @@ import { useInfiniteScroll } from "@vueuse/core";
 
 const twitch = useTwitch();
 
-const data = ref<Donobits[]>();
+const data = ref<Dasher[]>();
 const isLoading = ref(true);
 const volume = ref(100);
 const search = ref("");
@@ -65,7 +65,7 @@ onMounted(() => {
     if (!broadcaster.value) {
       broadcaster.value = await twitch.getUserById(auth.channelId);
 
-      data.value = await getDonobits(broadcaster.value!, auth);
+      data.value = await getDasher(broadcaster.value!, auth);
       const viewerNames = audioClips.value.map(clip => clip.name);
       if (viewerNames.length) {
         avatars.value = await twitch.getAvatars(viewerNames);
@@ -114,7 +114,7 @@ onMounted(() => {
           type: data.type,
           url: data.url
         }
-      } satisfies DonobitsQueue
+      } satisfies DasherQueue
     }).catch(() => {
       error.value = "Failed to queue clip. Ask the broadcaster for assistance.";
     });

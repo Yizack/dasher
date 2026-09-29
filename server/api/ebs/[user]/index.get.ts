@@ -5,5 +5,5 @@ export default defineEventHandler(async (event) => {
 
   await ensureTwitchExtension(event);
 
-  return blob.serve(event, `donobits/${params.user}.json`) as unknown as Donobits[];
+  return blob.serve(event, `dasher/${params.user}.json`) as unknown as Dasher[];
 });

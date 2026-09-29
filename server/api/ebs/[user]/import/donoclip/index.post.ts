@@ -20,15 +20,15 @@ export default defineEventHandler(async (event) => {
   const donoclipImport = (body satisfies DonoclipImport[])
     .sort((a, b) => b.UploadedAt - a.UploadedAt);
 
-  const donobits: Donobits[] = donoclipImport.map(item => ({
+  const dasher: Dasher[] = donoclipImport.map(item => ({
     uuid: item.UUID,
     type: item.Type,
     name: item.ViewerName,
     url: item.AssetUrl
   }));
 
-  await blob.put(`${params.user}.json`, JSON.stringify(donobits), {
-    prefix: "donobits",
+  await blob.put(`${params.user}.json`, JSON.stringify(dasher), {
+    prefix: "dasher",
     contentType: "application/json"
   });
 

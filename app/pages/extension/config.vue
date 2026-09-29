@@ -3,7 +3,7 @@ import type { HelixUser } from "@twurple/api";
 
 const twitch = useTwitch();
 
-const data = ref<Donobits[]>();
+const data = ref<Dasher[]>();
 const isLoading = ref(true);
 const extAuth = ref<Twitch.ext.Authorized | null>(null);
 const broadcaster = ref<ExcludeFn<HelixUser> | null>(null);
@@ -21,7 +21,7 @@ const importDonoclip = async (content: string) => {
     },
     body: content
   }).then(async () => {
-    data.value = await getDonobits(broadcaster.value!, extAuth.value!);
+    data.value = await getDasher(broadcaster.value!, extAuth.value!);
     showDonoclipInstructions.value = false;
   }).catch(() => {
     error.value = "Failed to import donoclip content";
@@ -44,7 +44,7 @@ onMounted(async () => {
 
     if (!broadcaster.value) {
       broadcaster.value = await twitch.getUserById(auth.channelId);
-      data.value = await getDonobits(broadcaster.value!, auth);
+      data.value = await getDasher(broadcaster.value!, auth);
       isLoading.value = false;
     }
   });

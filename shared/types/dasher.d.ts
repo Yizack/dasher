@@ -1,29 +1,29 @@
-export interface Donobits {
+export interface Dasher {
   uuid: string;
   type: "audio" | "video";
   name: string;
   url: string;
 }
 
-export interface DonobitsQueue {
+export interface DasherQueue {
   image?: string;
   transaction: Pick<Twitch.ext.BitsTransaction, "displayName" | "transactionReceipt">;
-  data: Donobits;
+  data: Dasher;
 }
 
-export interface DonobitsQueued {
+export interface DasherQueued {
   image?: string;
   transaction: Pick<Twitch.ext.BitsTransaction, "displayName"> & {
     product: Pick<Twitch.ext.BitsTransaction["product"], "cost">;
   };
-  data: Donobits;
+  data: Dasher;
 }
 
-export interface DonobitsQueuedEvent {
+export interface DasherQueuedEvent {
   type: "queued";
-  data: DonobitsQueued;
+  data: DasherQueued;
 }
 
-export interface DonoBitsQueueItem extends DonobitsQueued {
+export interface DasherQueueItem extends DasherQueued {
   queueId: number;
 }

@@ -4,7 +4,7 @@ import WaveSurfer from "wavesurfer.js";
 definePageMeta({ layout: false });
 
 const props = defineProps<{
-  item: DonoBitsQueueItem;
+  item: DasherQueueItem;
 }>();
 
 const emits = defineEmits<{
@@ -156,7 +156,7 @@ onBeforeUnmount(destroyWaveform);
   <div class="relative h-100 w-full bg-black/95 rounded-4xl">
     <div class="absolute top-0 left-0 flex items-center text-3xl p-2">
       <UIcon name="pixelarticons:play" size="3.5rem" class="text-primary" />
-      <div>Donobits</div>
+      <div>Dasher</div>
     </div>
     <div ref="waveform" class="absolute inset-0 ps-3" />
     <UButton

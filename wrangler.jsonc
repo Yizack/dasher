@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "donobits",
+  "name": "dasher",
   "compatibility_date": "2026-09-16",
   "main": ".output/server/index.mjs",
   "compatibility_flags": ["nodejs_compat"],
   "routes": [
     {
-      "pattern": "donobits.yizack.com",
+      "pattern": "dasher.yizack.com",
       "custom_domain": true
     }
   ],

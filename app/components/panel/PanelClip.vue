@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
-  data: Donobits;
+  data: Dasher;
   image?: string;
   price?: string;
   disabled: boolean;

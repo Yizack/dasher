@@ -1,6 +1,7 @@
-# donobits
+# Dasher
 
-Twitch extension that allows your community to redeem recorded sounds with Bits and have it played live on stream.
+Twitch extension that allows your community to redeem recorded sounds with Bits and have it played
+live on stream.
 
 ## Features
 
@@ -18,10 +19,12 @@ Twitch extension that allows your community to redeem recorded sounds with Bits 
 ## How it works
 
 1. The broadcaster imports their content from the Extension config view.
-2. donobits provides a channel-specific URL to add as a Browser Source.
-3. Viewers browse the imported clips in the Extension panel and redeem one with Bits from the Extension panel.
+2. Dasher provides a channel-specific URL to add as a Browser Source.
+3. Viewers browse the imported clips in the Extension panel and redeem one with Bits from the
+   Extension panel.
 4. The server validates the transaction and sends the clip to the broadcaster's connected source.
-5. The broadcaster's connected source plays the queued clips in order and advances when each clip ends.
+5. The broadcaster's connected source plays the queued clips in order and advances when each clip
+   ends.
 
 ## Screenshots
 

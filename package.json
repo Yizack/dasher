@@ -1,8 +1,8 @@
 {
-  "name": "donobits",
+  "name": "dasher",
   "version": "0.0.1",
   "private": true,
-  "description": "Twitch Extension para canjear audios de donoclip por Bits.",
+  "description": "Twitch Extension para canjear audios de donoclip.com por Bits.",
   "type": "module",
   "scripts": {
     "build": "nuxt build",

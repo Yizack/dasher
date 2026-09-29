@@ -1,11 +1,11 @@
 export const SITE = {
-  name: "Donobits",
-  domain: "donobits.yizack.com",
+  name: "Dasher",
+  domain: "dasher.yizack.com",
   twitch: {
     extension: {
       products: ["AUDIO"]
     }
   },
-  host: import.meta.dev ? "http://localhost:5173" : "https://donobits.yizack.com",
+  host: import.meta.dev ? "http://localhost:5173" : "https://dasher.yizack.com",
   cdn: import.meta.dev ? "http://localhost:5173" : "https://cdn.yizack.com"
 };

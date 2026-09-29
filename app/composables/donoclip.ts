@@ -4,7 +4,7 @@ export const useDonoclip = (resource: {
   broadcaster: Ref<ExcludeFn<HelixUser> | null>;
   extAuth: Ref<Twitch.ext.Authorized | null>;
 }, callback: (content: string) => void) => {
-  const DONOCLIP_MESSAGE_TYPE = "donobits-donoclip-import";
+  const DONOCLIP_MESSAGE_TYPE = "dasher-donoclip-import";
   const tab = ref<Window | null>(null);
   const bookmarklet = ref("");
 
@@ -37,7 +37,7 @@ export const useDonoclip = (resource: {
       "const html = await (await fetch(location.href, {credentials:\"include\"})).text();",
       "const match = html.match(/const clipData = JSON\\.parse\\((\"(?:\\\\.|[^\"\\\\])*\")\\)/);",
       "if (!match) throw new Error(\"Donoclip clip data was not found on this page.\");",
-      "if (!window.opener) throw new Error(\"Open this inbox from the Donobits extension first.\");",
+      "if (!window.opener) throw new Error(\"Open this inbox from the Dasher extension first.\");",
       `window.opener.postMessage({ type: \"${DONOCLIP_MESSAGE_TYPE}\", data: JSON.parse(match[1]) }, \"${window.location.origin}\");`,
       "window.close();",
       "} catch (error) { alert(error ? error.message : \"Donoclip import failed\"); }",

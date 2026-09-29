@@ -52,7 +52,7 @@ export default defineEventHandler(async (event) => {
           },
           image: body.image,
           data: body.data
-        } satisfies DonobitsQueued
+        } satisfies DasherQueued
       }));
     }
 

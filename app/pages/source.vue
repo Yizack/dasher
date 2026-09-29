@@ -13,8 +13,8 @@ if (!user) {
   });
 }
 
-const queued = ref<DonoBitsQueueItem[]>([]);
-const addToQueue = (queue: DonobitsQueued) => queued.value.push({ ...queue, queueId: nextQueueId++ });
+const queued = ref<DasherQueueItem[]>([]);
+const addToQueue = (queue: DasherQueued) => queued.value.push({ ...queue, queueId: nextQueueId++ });
 let nextQueueId = 0;
 
 const testLoading = ref(false);
@@ -52,7 +52,7 @@ onMounted(() => {
   useWebSocket(`/ws/source?user=${encodeURIComponent(user)}`, {
     autoReconnect: true,
     onMessage: async (ws, event: MessageEvent<string>) => {
-      const message: DonobitsQueuedEvent = JSON.parse(event.data);
+      const message: DasherQueuedEvent = JSON.parse(event.data);
       if (!message.data) return;
 
       switch (message.type) {
