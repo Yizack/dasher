@@ -8,6 +8,10 @@
     {
       "pattern": "dasher.yizack.com",
       "custom_domain": true
+    },
+    {
+      "pattern": "donobits.yizack.com",
+      "custom_domain": true
     }
   ],
   "observability": { "enabled": true },
