@@ -10,12 +10,6 @@ export default defineNuxtConfig({
     "@nuxthub/core"
   ],
 
-  $development: {
-    ui: {
-      prose: true
-    }
-  },
-
   $env: {
     twitchExt: {
       app: {
@@ -24,10 +18,6 @@ export default defineNuxtConfig({
             class: "dark"
           }
         }
-      },
-
-      ui: {
-        prose: true
       }
     }
   },
