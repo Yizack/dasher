@@ -2,7 +2,7 @@
   "name": "dasher",
   "version": "0.0.1",
   "private": true,
-  "description": "Twitch Extension para canjear audios de donoclip.com por Bits.",
+  "description": "Twitch extension that allows your community to redeem recorded sounds with Bits and have it played live on stream.",
   "type": "module",
   "scripts": {
     "build": "nuxt build",
@@ -23,28 +23,28 @@
   "dependencies": {
     "@iconify-json/pixelarticons": "^1.2.9",
     "@nuxt/icon": "^2.5.1",
-    "@nuxt/ui": "^4.11.2",
+    "@nuxt/ui": "^4.11.3",
     "@nuxthub/core": "^0.10.8",
     "@nuxtjs/color-mode": "^4.0.1",
     "@twurple/api": "^8.2.0",
     "@twurple/auth-ext": "^8.2.0",
     "@vueuse/core": "^15.0.0",
     "nuxt": "^4.5.2",
-    "nuxt-twitch-ext": "0.2.10",
-    "sass-embedded": "^1.105.0",
+    "nuxt-twitch-ext": "0.2.11",
+    "sass-embedded": "^1.105.1",
     "wavesurfer.js": "^8.0.1",
     "zod": "^4.6.5"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^5.20260929.1",
-    "@types/node": "^26.6.3",
+    "@cloudflare/workers-types": "^5.20261002.1",
+    "@types/node": "^26.6.4",
     "@yizack/eslint-config": "^0.0.6",
     "nuxt-ui-colors-no-inline": "^0.0.6",
-    "stylelint": "^17.15.0",
+    "stylelint": "^17.16.0",
     "stylelint-config-standard-scss": "^17.0.0",
     "typescript": "^6.0.3",
     "vue-tsc": "^3.3.11",
-    "wrangler": "^4.143.1"
+    "wrangler": "^4.146.0"
   },
   "packageManager": "pnpm@12.8.1"
 }
